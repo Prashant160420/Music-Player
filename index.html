@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Music Player</h1>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <main class="container">
+        <section id="all-songs-card">
+            <div id="filter-container">
+                <label for="genre-filter">Filter by genre:</label>
+                <select id="genre-filter">
+                    <option value="All">All</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Hip-Hop">Hip-Hop</option>
+                </select>
+            </div>
+
+            <h2>All Songs</h2>
+
+            <div id="displayed-songs">
+                <ul id="all-songs-list"></ul>
+            </div>
+        </section>
+
+        <section id="song-card">
+            <div class="song-details">
+                <img id="song-image" src="./Images/Shape Of You.jpg" alt="Cover art for Shape Of You by Ed Sheeran">
+                <h2 id="song-title" class="song-title">Shape Of You</h2>
+                <p id="artist-name" class="artist-name">Ed Sheeran</p>
+            </div>
+
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="./audio/Ed Sheeran - Shape of You.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+
+            <div class="song-controls">
+                <button id="prev-song">Previous</button>
+                <button id="next-song">Next</button>
+            </div>
+            <button id="add-to-playlist">Add to Playlist</button>
+        </section>
+
+        <section id="playlist-section">
+            <input type="text" id="playlist-name-input" placeholder="Enter playlist name...">
+            <button id="create-playlist-button">Create Playlist</button>
+
+            <h3>Current Playlist</h3>
+            <ul id="current-playlist"></ul>
+
+            <h3>All Playlists</h3>
+            <ul id="all-playlists"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

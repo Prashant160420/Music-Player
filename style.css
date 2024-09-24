@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.header-title {
+    flex: 1; 
+    text-align: center; 
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: auto; 
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #10ea00;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+section {
+    background-color: lightskyblue;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2{
+    margin-top: 30px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#all-songs-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#all-songs-list {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+}
+
+#all-songs-list li {
+    margin: 5px 0; 
+    padding: 8px; 
+    border-radius: 5px; 
+    background-color: rgb(35, 141, 207);
+    width: 100%;
+    color: white;
+}
+
+#all-songs-list li:hover{
+    background-color: rgba(255, 255, 255, 0.704);
+    color: black;
+}
+
+#filter-container {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+#genre-filter {
+    width: 150px; 
+    margin-left: 10px; 
+}
+
+select, input[type="text"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+#displayed-songs {
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+/* Playlist section */
+#playlist-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#playlist-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.song-details img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.song-controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.song-controls button {
+    margin: 0 10px; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.2s;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode #all-songs-list li {
+    background-color: rgb(35, 55, 75); 
+    color: #e0e0e0; 
+}
+
+body.dark-mode #all-songs-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: white; 
+}
+
+body.dark-mode li:hover{
+    color: black;
+    background-color: white;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e; 
+}
+
+body.dark-mode h2, body.dark-mode h3 {
+    color: white;
+}
+
+body.dark-mode button {
+    background-color: #bb86fc;
+}
+
+body.dark-mode button:hover {
+    background-color: #6200ea;
+}
